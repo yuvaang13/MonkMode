@@ -6,7 +6,7 @@
   <title>MonkMode — Escape Addiction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,71 +14,49 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="MonkMode home">M<span class="nav__logo-accent">M</span></a>
+      <a href="#" class="nav__logo" aria-label="MonkMode home">MM</a>
       <div class="nav__links">
         <a href="#how-it-works">How it works</a>
         <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#open-source">Open source</a>
         <a href="#faq">FAQ</a>
-        <a href="#" class="nav__cta">Download on iOS</a>
+        <a href="https://github.com/yuvaang13/MonkMode-app" target="_blank" rel="noopener" class="nav__cta">View on GitHub</a>
       </div>
       <button class="nav__menu" aria-label="Open menu" aria-expanded="false"></button>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero (full screen) -->
   <header class="hero" id="hero">
-    <div class="hero__overlay"></div>
     <div class="hero__content">
       <div class="hero__badge">
         <span class="hero__year">2026</span>
-        <span class="hero__divider">·</span>
+        <span class="hero__divider">&#8226;</span>
         <span class="hero__kicker">ESCAPE ADDICTION</span>
-        <span class="hero__divider">·</span>
-        <span class="hero__location">boston</span>
+        <span class="hero__divider">&#8226;</span>
+        <span class="hero__location">boston, ma</span>
       </div>
 
       <h1 class="hero__title">
-        <span class="hero__word hero__word--monk">MONK</span>
-        <span class="hero__word hero__word--mode">MODE</span>
+        <span class="hero__word">MONK</span>
+        <span class="hero__word">MODE</span>
       </h1>
 
       <p class="hero__description">
-        MonkMode is an iOS-first deep-focus system built to eliminate distractions and
+        MonkMode is an open source deep-focus system built to eliminate distractions and
         make meaningful work the default—combining intentional friction, Screen Time-powered
         blocking, commitment rituals, and accountability into one disciplined workflow.
       </p>
 
       <div class="hero__actions">
-        <a href="#how-it-works" class="btn btn--primary">Get started</a>
-        <a href="#features" class="btn btn--ghost">Learn more</a>
+        <a href="#how-it-works" class="btn btn--primary">How it works</a>
+        <a href="https://github.com/yuvaang13/MonkMode-app" target="_blank" rel="noopener" class="btn btn--ghost">View on GitHub</a>
       </div>
 
       <div class="hero__meta">
-        <span class="meta__item"><span class="meta__label">github</span> yuvaang13</span>
-        <span class="meta__item"><span class="meta__label">email</span> yuvaangulati7689@gmail.com</span>
-        <span class="meta__item"><span class="meta__label">location</span> nashua, nh</span>
-      </div>
-    </div>
-
-    <div class="hero__visual">
-      <div class="visual-card">
-        <div class="visual-card__screen">
-          <div class="status-bar">
-            <span class="signal"></span>
-            <span class="time">9:41</span>
-            <span class="battery"></span>
-          </div>
-          <div class="screen-content">
-            <div class="focus-badge">Focus session</div>
-            <div class="timer">25:00</div>
-            <div class="session-info">Deep work · No distractions</div>
-            <div class="controls">
-              <button class="control-btn control-btn--pause"></button>
-              <button class="control-btn control-btn--end"></button>
-            </div>
-          </div>
-        </div>
+        <div class="meta__item"><span class="meta__label">github</span> yuvaang13</div>
+        <div class="meta__item"><span class="meta__label">email</span> yuvaangulati7689@gmail.com</div>
+        <div class="meta__item"><span class="meta__label">status</span> open source · not yet on iOS</div>
       </div>
     </div>
   </header>
@@ -89,7 +67,7 @@
       <div class="section__header">
         <span class="section__kicker">How it works</span>
         <h2 class="section__title">Commitment through friction</h2>
-        <p class="section__description">MonkMode doesn't rely on willpower. It builds deliberate barriers between you and distraction.</p>
+        <p class="section__description">MonkMode does not rely on willpower. It builds deliberate barriers between you and distraction.</p>
       </div>
 
       <div class="steps">
@@ -123,32 +101,32 @@
 
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">⏱️</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Timed &amp; multi-day sessions</h3>
           <p class="feature-card__text">Run focus blocks that last minutes or days. Your phone stays locked until the session ends.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🚫</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Screen Time blocking</h3>
-          <p class="feature-card__title">Optional native enforcement via FamilyControls/ManagedSettings—works without a paid Apple Developer account.</p>
+          <p class="feature-card__text">Optional native enforcement via FamilyControls/ManagedSettings—works without a paid Apple Developer account.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🔒</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Friend lock</h3>
           <p class="feature-card__text">Accountability flows let a trusted friend hold the key to your blocked apps.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">📊</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Stats &amp; streaks</h3>
           <p class="feature-card__text">View session history, streaks, and recovery missions to measure your discipline over time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌐</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Website blocklist</h3>
           <p class="feature-card__text">Block or allow specific websites with shareable, exportable lists for deep work.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🔗</div>
+          <div class="feature-card__marker">&#9642;</div>
           <h3 class="feature-card__title">Webhooks</h3>
           <p class="feature-card__text">Optional outbound webhooks for session events so you can integrate MonkMode into your own stack.</p>
         </div>
@@ -156,52 +134,30 @@
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="section section--alt" id="pricing">
+  <!-- Open source (replaces pricing / paywall) -->
+  <section class="section section--alt" id="open-source">
     <div class="container">
       <div class="section__header section__header--center">
-        <span class="section__kicker">Pricing</span>
-        <h2 class="section__title">Simple, one-time unlock</h2>
-        <p class="section__description">No subscriptions. Pay once, keep MonkMode forever.</p>
+        <span class="section__kicker">Open source</span>
+        <h2 class="section__title">No paywall. No subscription.</h2>
+        <p class="section__description">MonkMode is fully open source. It is not yet deployed on iOS. View the source and contribute on GitHub.</p>
       </div>
 
-      <div class="pricing-grid">
-        <div class="pricing-card pricing-card--free">
-          <div class="pricing-card__header">
-            <h3 class="pricing-card__title">Free</h3>
-            <p class="pricing-card__subtitle">Get started with deep work</p>
-          </div>
-          <div class="pricing-card__price">
-            <span class="currency">$</span><span class="amount">0</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>Timed focus sessions</li>
-            <li>Guided Screen Time setup</li>
-            <li>Basic session stats</li>
-            <li class="pricing-card__feature--locked">Multi-day sessions <span class="lock">🔒</span></li>
-            <li class="pricing-card__feature--locked">Friend lock <span class="lock">🔒</span></li>
-          </ul>
-          <a href="#" class="btn btn--outline btn--block">Start for free</a>
+      <div class="opensource-grid">
+        <div class="opensource-card">
+          <h3 class="opensource-card__title">Source code</h3>
+          <p class="opensource-card__text">The full iOS app lives in <code>monkmode/monkmode-v3/</code>. Expo SDK 51, React Native 0.74, TypeScript.</p>
+          <a href="https://github.com/yuvaang13/MonkMode-app" target="_blank" rel="noopener" class="btn btn--block btn--primary">View on GitHub</a>
         </div>
-        <div class="pricing-card pricing-card--pro">
-          <div class="pricing-card__badge">Most popular</div>
-          <div class="pricing-card__header">
-            <h3 class="pricing-card__title">MonkMode Pro</h3>
-            <p class="pricing-card__subtitle">Unlock the full deep-focus system</p>
-          </div>
-          <div class="pricing-card__price">
-            <span class="currency">$</span><span class="amount">19</span><span class="period">once</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>All Free features</li>
-            <li>Multi-day focus sessions</li>
-            <li>Native Screen Time enforcement</li>
-            <li>Friend lock + accountability</li>
-            <li>Website blocklist / allowlist</li>
-            <li>Streaks &amp; recovery missions</li>
-            <li>Outbound webhooks</li>
-          </ul>
-          <a href="#" class="btn btn--primary btn--block">Unlock MonkMode</a>
+        <div class="opensource-card">
+          <h3 class="opensource-card__title">How to run</h3>
+          <p class="opensource-card__text">Clone the repo, install dependencies, and start Expo. A real device is required for iOS Screen Time integration.</p>
+          <pre class="opensource-card__code">git clone https://github.com/yuvaang13/MonkMode-app\ncd MonkMode-app/monkmode/monkmode-v3\nnpm install\nnpm run start</pre>
+        </div>
+        <div class="opensource-card">
+          <h3 class="opensource-card__title">Status</h3>
+          <p class="opensource-card__text">Active development. Native iOS modules handle Screen Time and device integrations. Not yet published to the App Store.</p>
+          <a href="https://github.com/yuvaang13/MonkMode-app/issues" target="_blank" rel="noopener" class="btn btn--block btn--ghost">Open an issue</a>
         </div>
       </div>
     </div>
@@ -218,11 +174,20 @@
       <div class="faq-grid">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Is MonkMode only for iOS?
+            Is MonkMode on iOS yet?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer" hidden>
-            <p>MonkMode is iOS-first and built around Apple's Screen Time. It works best on iPhone, with guided setup that doesn't require a paid Apple Developer account.</p>
+            <p>Not yet deployed on iOS. The source is on GitHub and ready to build locally with Expo.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is it open source?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Yes. MonkMode is fully open source. There is no paywall and no subscription.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -231,26 +196,16 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer" hidden>
-            <p>No. By default, MonkMode guides you to configure Screen Time manually. Native enforcement mode is optional and requires entitlement approval if you choose it.</p>
+            <p>No. By default MonkMode guides you to configure Screen Time manually. Native enforcement mode is optional.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             Can I block specific websites?
-            <p>MonkMode is iOS-first and built around Apple's Screen Time. It works best on iPhone, with guided setup that doesn't require a paid Apple Developer account.</p>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer" hidden>
-            <p>Yes. You get website blocklist / allowlist tools with share and export options, so you can block distracting sites during focus sessions.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Is there a subscription?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p>Nope. MonkMode Pro is a one-time purchase via RevenueCat. Pay once, unlock forever.</p>
+            <p>Yes. You get website blocklist / allowlist tools with share and export options.</p>
           </div>
         </div>
       </div>
@@ -261,12 +216,13 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <div class="footer__logo">M<span class="footer__logo-accent">M</span></div>
+        <div class="footer__logo">MM</div>
         <p class="footer__tagline">Escape addiction. Do meaningful work.</p>
       </div>
       <div class="footer__legal">
-        <p>&copy; 2026 MonkMode. Boston, NH.</p>
+        <p>&copy; 2026 MonkMode. Boston, MA.</p>
         <p>github: yuvaang13 · yuvaangulati7689@gmail.com</p>
+        <p>Open source · Not yet on iOS</p>
       </div>
     </div>
   </footer>

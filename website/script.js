@@ -15,7 +15,6 @@
       menuBtn.setAttribute("aria-expanded", isOpen);
     });
 
-    // Close nav when clicking a link
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -31,6 +30,17 @@
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
 
+      // Close other open answers in this section
+      btn.closest(".faq-grid").querySelectorAll(".faq-question").forEach((other) => {
+        if (other !== btn) {
+          other.setAttribute("aria-expanded", "false");
+          const otherAns = other.nextElementSibling;
+          const otherIcon = other.querySelector(".faq-icon");
+          if (otherAns) otherAns.hidden = true;
+          if (otherIcon) otherIcon.textContent = "+";
+        }
+      });
+
       btn.setAttribute("aria-expanded", !isOpen);
       if (answer) {
         answer.hidden = !isOpen;
@@ -41,39 +51,33 @@
     });
   });
 
-  // Reveal animations on scroll (Intersection Observer)
-  const observerOptions = {
-    threshold: 0.12,
-    rootMargin: "0px 0px -60px 0px",
-  };
+  // Scroll reveal animations
+  const revealEls = document.querySelectorAll(
+    ".step, .feature-card, .opensource-card, .faq-item"
+  );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll(".step, .feature-card").forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(24px)";
-    el.style.transition = "opacity 700ms cubic-bezier(0.23, 1, 0.32, 1), transform 700ms cubic-bezier(0.23, 1, 0.32, 1)";
-    observer.observe(el);
-  });
-
-  // Smooth focus for CTA buttons
-  document.querySelectorAll(".btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const href = btn.getAttribute("href");
-      if (href && href.startsWith("#")) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          observer.unobserve(entry.target);
         }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+
+  // Smooth scroll for internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
