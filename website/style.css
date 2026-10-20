@@ -152,9 +152,9 @@ code {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 0 32px;
+  padding: 100px 32px 120px;
   overflow: hidden;
 }
 
